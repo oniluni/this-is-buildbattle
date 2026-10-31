@@ -1,0 +1,10 @@
+name: Idea / Идея
+description: Suggest something new for the mod. / Предложить что-то новое.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea / Идея
+    validations:
+      required: true

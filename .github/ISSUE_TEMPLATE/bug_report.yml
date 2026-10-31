@@ -1,0 +1,32 @@
+name: Bug report / Ошибка
+description: Something doesn't work as it should. / Что-то работает не так.
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Mod version / Версия мода
+      placeholder: "4.2.0"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect? / Что случилось и что ожидалось?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / Как повторить
+      placeholder: "1. …"
+  - type: textarea
+    id: log
+    attributes:
+      label: Log or crash report / Лог или отчёт о вылете
+      description: "logs/latest.log or crash-reports/… / logs/latest.log или crash-reports/…"
+      render: text
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other mods / Другие моды

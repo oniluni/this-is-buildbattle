@@ -40,6 +40,8 @@ except building still happens in menus: the HUD is hidden and the main menu is o
   A search field filters by theme and note, **Daily** shows only themes of the day, and **To trash**
   moves a build to the **trash**, where it can be restored (the selected build is shown in 3D); it is
   deleted for good after 30 days.
+- **Recent games** — the last 50 games, newest first: theme, mode, your stars, other players' rating
+  and when; click one to open it in My builds.
 - **Multiplayer** — play with someone else (see below).
 - **Statistics** — cards for games, themes, blocks placed (**All placed blocks** lists every block), time in game, idle
   time and average rating, and a bar chart of the ratings. **Progress** charts the average rating per
@@ -197,6 +199,8 @@ the in-game editor. Names and categories are up to 24 characters; a missing cate
   Поиск ищет по теме и заметке, **Дневные** показывает только темы дня, **В корзину** убирает постройку
   в **корзину**: оттуда её можно восстановить (выбранная постройка видна в 3D), через 30 дней она
   удаляется насовсем.
+- **Последние игры** — 50 последних игр, сначала новые: тема, режим, ваша оценка, оценка других и
+  дата; нажмите на игру, чтобы открыть её в «Моих постройках».
 - **Мультиплеер** — игра вдвоём (см. ниже).
 - **Статистика** — карточки: игры, темы, поставленные блоки (**Все поставленные блоки** — каждый блок), время в игре,
   безделье, средняя оценка; гистограмма оценок. **Прогресс** — графики: средняя оценка по неделям,

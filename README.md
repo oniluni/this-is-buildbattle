@@ -12,7 +12,8 @@ The source code is not published.
 ## How it works
 
 Press **This is BuildBattle** on the title screen. The mod's menu opens straight away, without
-loading a world; its buttons are shown as items with their names. The mod's own world (created the
+loading a world: a side menu with its pages and your profile card (face, level, XP), and Esc steps
+back one page at a time. The mod's own world (created the
 first time) is loaded only when a game starts or a build is viewed, and then stays open until you
 quit. It is kept out of the singleplayer list and cannot be opened to LAN. In the world everything
 except building still happens in menus: the HUD is hidden and the main menu is open.
@@ -22,14 +23,16 @@ except building still happens in menus: the HUD is hidden and the main menu is o
   the **difficulty** of the offered themes; and **modifiers** for more XP: only 3 kinds of blocks, a
   limit of 150 blocks, 2-minute speed build, no breaking. Then a 3-second countdown, a choice of five
   random themes (cards with category and difficulty) and a 27×27 arena. You have **5 minutes** to
-  build; the top of the screen shows the theme, the game number and the time left (the last 10 seconds
-  tick audibly). When time runs out you rate the build 1–5 stars within **30 seconds**, flying around
+  build; the top of the screen shows the game number, the theme and the time left, with a bar running
+  down under them (red in the last 30 seconds; the last 10 seconds tick audibly), and below that the
+  block limit, the kinds of blocks and the series game when they apply. When time runs out you rate the build 1–5 stars within **30 seconds**, flying around
   it with a panel of stars at the bottom (wheel selects, a mouse button rates). The build is saved,
   together with a **timelapse** of how it was built.
 - **My builds** — a carousel: the selected build as a large 3D preview (leaning slightly towards the
   cursor) between smaller previews of the previous and next theme. ◀ ▶, Shift + wheel or ←/→ move
   between themes; attempts at the same theme are stacked vertically (wheel or ↑/↓). The arena floor is
-  left out of the previews.
+  left out of the previews. **All builds** shows every build at once as a grid of cards, with the same
+  search, filters and sorting; a card opens the carousel on that build.
   **View** builds it up in front of you. You fly around it freely (not below the arena floor, not far
   away); a panel at the bottom offers rate again, build again (refine it or start the same theme from
   scratch), note, timelapse (the recording replayed in fifteen seconds) and exit: the mouse wheel
@@ -38,7 +41,7 @@ except building still happens in menus: the HUD is hidden and the main menu is o
   moves a build to the **trash**, where it can be restored (the selected build is shown in 3D); it is
   deleted for good after 30 days.
 - **Multiplayer** — play with someone else (see below).
-- **Statistics** — cards for games, themes, blocks placed (click for every block), time in game, idle
+- **Statistics** — cards for games, themes, blocks placed (**All placed blocks** lists every block), time in game, idle
   time and average rating, and a bar chart of the ratings. **Progress** charts the average rating per
   week, the building time and the idle share of recent games.
 - **Themes** — every theme, filtered by difficulty (easy, medium, hard) and category; click one to ban
@@ -52,7 +55,10 @@ except building still happens in menus: the HUD is hidden and the main menu is o
 
 ### Playing together
 
-- **Duel** — the same theme for both, each on their own arena; everyone rates their own build.
+- **Duel** — the same theme for both, each on their own arena. Everyone rates their own build first,
+  then flies over to the other arena and rates the opponent's. The opponent's rating is kept beside
+  your own; **My builds** shows it together with other players' ratings as the average and the number
+  of raters, e.g. 4.2 (18).
 - **Duo** — one build together on one arena; both rate it and the average is kept.
 
 **Multiplayer** shows how many players have the mod open right now, and offers two ways to play:
@@ -118,6 +124,19 @@ Vanilla's recipe, advancement, tutorial and "now playing" toasts are switched of
 Builds, statistics, progress and banned themes are stored in `<game directory>/solobuild/` and are
 shared by all worlds.
 
+### Rating other players' builds
+
+Every finished game goes out for other players to rate, with your name; old builds stay on your
+computer. **Rate builds** in the menu hands out ten builds of other players: each in 3D, the theme
+and how it was played above, the author hidden until you rate it (keys 1–5, ← → to browse). After the
+round you see who built what and how other players rated it; up to 30 ratings a day. **My builds**
+shows other players' ratings of a build (the average, the spread, the last week, who rated it), and a
+build can be taken off rating there. The menu counts new ratings of your builds.
+
+Rating needs a licensed Minecraft account (Mojang vouches for it; the game's login never leaves your
+computer) and the mod check passed online. Your own themes are published as "Own theme", without
+their name. A duo build is published by the host. Three reports hide a build until it is looked at.
+
 ### Theme packs
 
 Every `*.json` file in `<game directory>/solobuild/themes/` adds themes; `custom.json` is written by
@@ -152,8 +171,8 @@ the in-game editor. Names and categories are up to 24 characters; a missing cate
 
 Мод для Fabric 26.3 для тренировки Build Battle: одному, в дуэли 1 на 1 или вдвоём.
 
-Нажмите **This is BuildBattle** в главном меню игры. Сразу откроется меню мода, без загрузки мира; его
-кнопки показаны предметами с подписями. Собственный мир мода (создаётся при первом запуске) загружается
+Нажмите **This is BuildBattle** в главном меню игры. Сразу откроется меню мода, без загрузки мира:
+слева разделы и карточка профиля (лицо, уровень, опыт), Esc возвращает на один шаг назад. Собственный мир мода (создаётся при первом запуске) загружается
 только когда начинается игра или просмотр постройки и дальше остаётся открытым до выхода. Его нет в
 списке одиночных миров, и его нельзя открыть для сети. В мире всё, кроме строительства, — тоже меню:
 интерфейс скрыт, открыто главное меню.
@@ -162,13 +181,16 @@ the in-game editor. Names and categories are up to 24 characters; a missing cate
   средняя оценка) или **тема дня** (одна и та же тема у всех в этот день); **сложность** предлагаемых
   тем; **модификаторы** за дополнительный опыт: только 3 вида блоков, лимит 150 блоков, спидбилд на
   2 минуты, без отмены (блоки нельзя ломать). Затем отсчёт 3 секунды, выбор одной из пяти случайных тем
-  (карточки с категорией и сложностью) и арена 27×27. **5 минут** на постройку; вверху по центру — тема,
-  номер игры и таймер (последние 10 секунд тикают). Затем **30 секунд** на оценку от 1 до 5 звёзд: вы
+  (карточки с категорией и сложностью) и арена 27×27. **5 минут** на постройку; вверху по центру — номер
+  игры, тема и таймер с убывающей полоской (последние 30 секунд она красная, последние 10 секунд
+  тикают), под ними — лимит блоков, виды блоков и игра серии, если они есть. Затем **30 секунд** на оценку от 1 до 5 звёзд: вы
   летаете вокруг постройки, внизу панель со звёздами (колесо выбирает, кнопка мыши ставит оценку).
   Постройка сохраняется вместе с **таймлапсом** стройки.
 - **Мои постройки** — карусель: выбранная постройка крупно в 3D (слегка поворачивается к курсору), по
   бокам маленькие предыдущая и следующая темы. ◀ ▶, Shift + колесо или ←/→ — темы; попытки одной темы
-  стоят столбиком (колесо или ↑/↓). Пол арены в предпросмотре не показывается. **Смотреть** — постройка вырастает перед
+  стоят столбиком (колесо или ↑/↓). Пол арены в предпросмотре не показывается. **Все постройки** —
+  все постройки сразу сеткой карточек, с тем же поиском, фильтрами и сортировкой; карточка открывает
+  карусель на этой постройке. **Смотреть** — постройка вырастает перед
   вами, вы свободно летаете вокруг (не ниже пола арены и не слишком далеко). Внизу панель: оценить
   заново, построить снова (доработать или с нуля), заметка, таймлапс (запись стройки за 15 секунд),
   выйти — колесо выбирает, кнопка мыши нажимает. Тема, оценка, дата и заметка — в правом верхнем углу.
@@ -176,7 +198,7 @@ the in-game editor. Names and categories are up to 24 characters; a missing cate
   в **корзину**: оттуда её можно восстановить (выбранная постройка видна в 3D), через 30 дней она
   удаляется насовсем.
 - **Мультиплеер** — игра вдвоём (см. ниже).
-- **Статистика** — карточки: игры, темы, поставленные блоки (по клику — каждый блок), время в игре,
+- **Статистика** — карточки: игры, темы, поставленные блоки (**Все поставленные блоки** — каждый блок), время в игре,
   безделье, средняя оценка; гистограмма оценок. **Прогресс** — графики: средняя оценка по неделям,
   время стройки и доля простоя в последних играх.
 - **Темы** — список всех тем с фильтрами по сложности (лёгкие, средние, сложные) и категории; нажмите
@@ -189,7 +211,10 @@ the in-game editor. Names and categories are up to 24 characters; a missing cate
 
 ### Игра вдвоём
 
-- **Дуэль** — одна тема на двоих, у каждого своя арена; каждый оценивает свою постройку.
+- **Дуэль** — одна тема на двоих, у каждого своя арена. Сначала каждый оценивает свою постройку,
+  потом перелетает к арене соперника и оценивает его. Оценка соперника хранится рядом с вашей; в
+  **Моих постройках** она показана вместе с оценками игроков: средняя и число оценивших, например
+  4,2 (18).
 - **Дуо** — одна постройка вдвоём на одной арене; оценивают оба, сохраняется среднее.
 
 **Мультиплеер** показывает, сколько игроков сейчас открыли мод, и даёт два способа сыграть:
@@ -252,6 +277,19 @@ the in-game editor. Names and categories are up to 24 characters; a missing cate
 
 Постройки, статистика, прогресс и запрещённые темы хранятся в `<папка игры>/solobuild/` и общие для
 всех миров.
+
+### Оценка чужих построек
+
+Каждая сыгранная игра уходит на оценку другим игрокам вместе с вашим ником; старые постройки остаются
+на компьютере. **Оценка построек** в меню выдаёт десять чужих построек: каждая в 3D, сверху тема и
+как играли, автор скрыт до вашей оценки (клавиши 1–5, ← → листать). После раунда видно, кто что
+построил и как оценили другие; не больше 30 оценок в день. В **Моих постройках** — оценки игроков
+вашей постройки (средняя, распределение, последняя неделя, кто оценил), там же её можно снять с
+оценки. Меню показывает число новых оценок ваших построек.
+
+Оценивать можно только с лицензионным аккаунтом Minecraft (его подтверждает Mojang; данные входа не
+покидают компьютер) и после проверки модов онлайн. Свои темы публикуются как «Своя тема», без
+названия. Постройку дуо публикует хост. После трёх жалоб постройка скрывается до проверки.
 
 ### Наборы тем
 
